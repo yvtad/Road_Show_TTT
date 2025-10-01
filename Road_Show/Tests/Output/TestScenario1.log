@@ -1,10 +1,10 @@
-16:30:20.085 INFO      Total Test       ***************************************
-16:30:20.087 INFO      Total Test       ** Execution from Topaz with options **
-16:30:20.087 INFO      Total Test       ***************************************
-16:30:20.087 INFO      Total Test       Using repository: false
-16:30:20.087 INFO      Total Test       ***************************************
-16:30:20.088 INFO      Engine           Test Scenario execution started
-16:30:20.088 INFO      Engine           Using context settings:
+16:59:17.112 INFO      Total Test       ***************************************
+16:59:17.113 INFO      Total Test       ** Execution from Topaz with options **
+16:59:17.113 INFO      Total Test       ***************************************
+16:59:17.113 INFO      Total Test       Using repository: false
+16:59:17.113 INFO      Total Test       ***************************************
+16:59:17.113 INFO      Engine           Test Scenario execution started
+16:59:17.113 INFO      Engine           Using context settings:
   Engine Version                : 25.1.2.v20250902-1916_283
   Environment id                : 3733a884-8048-4e92-a5dc-22fee13c3d54
   Environment type              : Batch
@@ -21,37 +21,37 @@
   Use Repository Server         : false
   Account Information           : 
   Dataset High Level Qualifier  : 
-16:30:20.089 INFO      Engine           Setting variables from context and context data extensions
-16:30:20.089 INFO      Engine             id: environmentId      value: 3733a884-8048-4e92-a5dc-22fee13c3d54
-16:30:20.089 INFO      Engine             id: environmentType    value: BATCH
-16:30:20.090 INFO      Engine             id: userId             value: HBOYXN0
-16:30:20.090 INFO      Engine             id: accountingInfo     value: 
-16:30:20.090 INFO      Engine             id: datasetHQL         value: 
-16:30:20.092 INFO      Job              Interpreting JOB: Deploy Run
-16:30:20.093 INFO      Job              The Job in File/Dataset SALESSUP.TTT.RUN.JCL(CWTTJCLC) will be executed
-16:30:20.093 INFO      CWCC - Demo System Sending Job execution request to Host 
-16:30:25.213 INFO      CWCC - Demo System Job execution completed with status:
+16:59:17.113 INFO      Engine           Setting variables from context and context data extensions
+16:59:17.113 INFO      Engine             id: environmentId      value: 3733a884-8048-4e92-a5dc-22fee13c3d54
+16:59:17.114 INFO      Engine             id: environmentType    value: BATCH
+16:59:17.114 INFO      Engine             id: userId             value: HBOYXN0
+16:59:17.114 INFO      Engine             id: accountingInfo     value: 
+16:59:17.114 INFO      Engine             id: datasetHQL         value: 
+16:59:17.115 INFO      Job              Interpreting JOB: Deploy Run
+16:59:17.115 INFO      Job              The Job in File/Dataset SALESSUP.TTT.RUN.JCL(CWTTJCLC) will be executed
+16:59:17.116 INFO      CWCC - Demo System Sending Job execution request to Host 
+16:59:22.237 INFO      CWCC - Demo System Job execution completed with status:
   Job status     : COMPLETED
-  Job status msg : Job TSOIDX(J0619874) ended with return code: 0000
+  Job status msg : Job TSOIDX(J0619876) ended with return code: 0000
   Job name       : TSOIDX
-  Job id         : J0619874
+  Job id         : J0619876
   Return code    : 0000
   Abend code     : 
   Abend reason   : 
-16:30:25.214 INFO      Job              Successfully executed job: Deploy Run
-16:30:25.214 INFO      Component        Verifying job return code: 0000 against verify expression: value < 8
-16:30:25.232 INFO      FileAIDCompare   Executing File-AID Compare element with assertions:
-16:30:25.234 INFO      FileAIDCompare     Assert on changed records : true
-16:30:25.234 INFO      FileAIDCompare     Assert on inserted records: false
-16:30:25.235 INFO      FileAIDCompare     Assert on deleted records : false
-16:30:25.235 INFO      CWCC - Demo System Sending Job execution request to Host 
-16:30:30.364 INFO      CWCC - Demo System Job execution completed with status:
+16:59:22.238 INFO      Job              Successfully executed job: Deploy Run
+16:59:22.239 INFO      Component        Verifying job return code: 0000 against verify expression: value < 8
+16:59:22.252 INFO      FileAIDCompare   Executing File-AID Compare element with assertions:
+16:59:22.253 INFO      FileAIDCompare     Assert on changed records : true
+16:59:22.253 INFO      FileAIDCompare     Assert on inserted records: false
+16:59:22.253 INFO      FileAIDCompare     Assert on deleted records : false
+16:59:22.253 INFO      CWCC - Demo System Sending Job execution request to Host 
+16:59:27.372 INFO      CWCC - Demo System Job execution completed with status:
   Job status     : COMPLETED
-  Job status msg : Job TSOIDC(J0619875) ended with return code: 0003
+  Job status msg : Job TSOIDC(J0619877) ended with return code: 0003
   Job name       : TSOIDC
-  Job id         : J0619875
+  Job id         : J0619877
   Return code    : 0003
   Abend code     : 
   Abend reason   : 
-16:30:30.592 ERROR     FileAIDCompare   Number of records changed: 5. We now set the test scenario to failed
-16:30:30.593 INFO      Engine           Test Scenario execution ended
+16:59:27.478 ERROR     FileAIDCompare   Number of records changed: 5. We now set the test scenario to failed
+16:59:27.492 INFO      Engine           Test Scenario execution ended

@@ -4,7 +4,7 @@
     <Job name="Deploy Run" haltExecution="false" datasetName="SALESSUP.TTT.RUN.JCL(CWTTJCLC)" jobLocation="DATASET" returnCodeVerify="value &lt; 8">
       <Content><![CDATA[//XXX DD DSN=]]></Content>
     </Job>
-    <Job name="FAComp" haltExecution="true" datasetName="SALESSUP.TTT.RUN.JCL(FACOMR)" jobLocation="DATASET" returnCodeVerify="value &lt; 0">
+    <Job name="FAComp" haltExecution="true" datasetName="SALESSUP.TTT.RUN.JCL(FACOMR)" jobLocation="DATASET" returnCodeVerify="value &lt; 3">
       <Content><![CDATA[//XXX DD DSN=]]></Content>
     </Job>
     <FileAIDCompare label="Compare Outputs" checkChanged="true" checkInserted="true" checkDeleted="true">

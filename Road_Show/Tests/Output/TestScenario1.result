@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <XaUnitResult resultType="VERIFICATION_ERROR" containsSimulation="false">
-  <ExecutionId>3b36f32e-9e4b-415c-ba85-18d25d9c4671</ExecutionId>
+  <ExecutionId>519f9abc-9501-4ec2-9d64-8e5478a111e9</ExecutionId>
   <Message />
   <AST>
     <XaUnit xmlns="http://www.xact.dk/xatester/v/1" xmlns:data="http://www.xact.dk/xatester/data/v/1" caseInsensitiveCompare="false">
@@ -8,133 +8,9 @@
         <Job name="Deploy Run" haltExecution="false" datasetName="SALESSUP.TTT.RUN.JCL(CWTTJCLC)" jobLocation="DATASET" returnCodeVerify="value &lt; 8" resultReturnCode="0000">
           <Content><![CDATA[//XXX DD DSN=]]></Content>
         </Job>
-        <FileAIDCompare label="Compare Outputs" result="VERIFICATION_ERROR" checkChanged="true" checkInserted="false" checkDeleted="false">
-          <JCL><![CDATA[//TSOIDC JOB  ('OAABAS9.0.4QC',822),'FA COMPARE',
-//             CLASS=L,MSGCLASS=X,NOTIFY=&SYSUID
-/*JOBPARM  L=9999,S=CWCC
-//*
-//*  YOU ARE VIEWING JCL THAT FILE-AID/MVS HAS GENERATED TO
-//*  COMPARE DATASETS.
-//*
-//*  YOU CAN CHANGE THIS JCL IF DESIRED AND USE THE SUBMIT PRIMARY
-//*  COMMAND TO SUBMIT THE JOB. THE CREATE OR REPLACE PRIMARY COMMAND
-//*  CAN BE USED TO KEEP THIS JOBSTREAM FOR FUTURE USE.
-//*
-//*  USE THE END COMMAND TO EXIT WITHOUT SUBMITTING THE JOB.
-//*
-//FASTEP   EXEC PGM=FILEAID,REGION=08M
-//STEPLIB  DD DISP=SHR,DSN=CSGI.CW.VJGA.CXVJLOAD
-//         DD DISP=SHR,DSN=CSGI.CW.VJGA.SXVJLOAD
-//SYSPRINT DD  SYSOUT=*
-//SYSLIST  DD  SYSOUT=*,DCB=(LRECL=183,BLKSIZE=1830)
-//DD01     DD  DSN=SALESSUP.TTT.REPORT.FILE3,
-//             DISP=SHR
-//DD01C    DD  DSN=SALESSUP.TTT.REPORT.FILE1,
-//             DISP=SHR
-//DD01CP   DD  DSN=SALESSUP.FILEAID.CC.D20205.T160739,
-//             DISP=(OLD,KEEP,KEEP)
-//SYSIN    DD  *
-$$DD01 COMPARE
-/*
-//]]></JCL>
-          <ResultReport><![CDATA[Â»
-ï¿½FILE-AID 23.1   COMPARE DETAIL REPORT              USERID-TSOIDC         DATE 01/10/2025        TIME 15:59:22        PAGE         1
-ï¿½"OLD" DSN: SALESSUP.TTT.REPORT.FILE3                              "NEW" DSN: SALESSUP.TTT.REPORT.FILE1
-ï¿½===================================================================================================================================
-ï¿½CHANGED OLD REC         4   ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+----9----+----0
-ï¿½         POS.     1-   81     RUN DATE  10/01/25       EMPLOYEE COMPENSATION REPORT                  PAGE   1
-ï¿½                                        __ __
-ï¿½CHANGED NEW REC         4
-ï¿½         POS.     1-   81     RUN DATE  09/29/25       EMPLOYEE COMPENSATION REPORT                  PAGE   1
-ï¿½                                        __ __
-ï¿½===================================================================================================================================
-ï¿½CHANGED OLD REC        17
-ï¿½         POS.     1-   81     MARCIA SULLIVAN EAST    H   04/05/93   32   1200.00   180.00      0.00  1380.00
-ï¿½                                                                           __       _                  ___
-ï¿½CHANGED NEW REC        17
-ï¿½         POS.     1-   81     MARCIA SULLIVAN EAST    H   04/05/93   32   1050.00   380.00      0.00  1455.00
-ï¿½                                                                           __       _                  ___
-ï¿½===================================================================================================================================
-ï¿½CHANGED OLD REC        21
-ï¿½         POS.     1-   81     SAMUEL ADDAMS   WEST    H   01/02/86   39   1100.00    82.50      0.00  1182.50
-ï¿½                                                                          ____ _    _ _ __             ___ _
-ï¿½CHANGED NEW REC        21
-ï¿½         POS.     1-   81     SAMUEL ADDAMS   WEST    H   01/02/86   39    962.50   288.75      0.00  1251.25
-ï¿½                                                                          ____ _    _ _ __             ___ _
-ï¿½===================================================================================================================================
-ï¿½CHANGED OLD REC        22
-ï¿½         POS.     1-   81     MARK JOHNSON    WEST    S   09/30/82   43    750.00     0.00   6000.00  6750.00
-ï¿½                                                                      _
-ï¿½CHANGED NEW REC        22
-ï¿½         POS.     1-   81     MARK JOHNSON    WEST    S   09/30/82   42    750.00     0.00   6000.00  6750.00
-ï¿½                                                                      _
-ï¿½===================================================================================================================================
-ï¿½CHANGED OLD REC        24
-ï¿½         POS.     1-   81        TOTAL                                                               45366.00
-ï¿½                                                                                                       ___ _
-ï¿½CHANGED NEW REC        24
-ï¿½         POS.     1-   81        TOTAL                                                               45509.75
-ï¿½                                                                                                       ___ _
-ï¿½===================================================================================================================================
-ï¿½
-ï¿½                                                **** E N D   O F   R E P O R T ****
-Â»
-ï¿½FILE-AID 23.1   COMPARE CRITERIA CONTENTS REPORT   USERID-TSOIDC         DATE 01/10/2025        TIME 15:59:22        PAGE         1
-ï¿½ COMPARE CRITERIA DSN: SALESSUP.FILEAID.CC.D20205.T160739
-ï¿½===================================================================================================================================
-ï¿½    COMPARE CRITERIA CONTENTS:
-ï¿½    RECORD COMPARE CRITERIA:
-ï¿½            COMPARE TYPE:                                 ONE-TO-ONE
-ï¿½            MAX NUMBER OF RECORDS TO COMPARE:           0  (0 = NO LIMIT)
-ï¿½            MAX NUMBER OF DIFFERENCES TO COMPARE:       0  (0 = NO LIMIT)
-ï¿½
-ï¿½===================================================================================================================================
-ï¿½     OLD LAYOUT MEMBER:                                      NEW |     NEW LAYOUT MEMBER:                                      OLD
-ï¿½ NUM OLD-RECORD-LAYOUT              START  FORMAT   STATUS  FIELD| NUM NEW-RECORD-LAYOUT              START  FORMAT   STATUS  FIELD
-ï¿½---- ------------------------------ ------ -------- ------- -----|---- ------------------------------ ------ -------- ------- -----
-ï¿½   1                                     1 C     80 COMPARE     1|   1                                     1 C     80 COMPARE     1
-ï¿½     END OF RECORD. LENGTH = 81                                  |     END OF RECORD. LENGTH = 81
-ï¿½
-ï¿½                                                ****  E N D  O F  R E P O R T  ****
-Â»
-ï¿½FILE-AID 23.1   COMPARE SUMMARY REPORT             USERID-TSOIDC         DATE 01/10/2025        TIME 15:59:22        PAGE         1
-ï¿½"OLD" DSN: SALESSUP.TTT.REPORT.FILE3                              "NEW" DSN: SALESSUP.TTT.REPORT.FILE1
-ï¿½===================================================================================================================================
-ï¿½    COMPARE CRITERIA:
-ï¿½            COMPARE MODE:                               UNFORMATTED
-ï¿½
-ï¿½    REPORT FORMAT PARAMETERS:
-ï¿½            PRINT FORMAT:                               CHARACTER
-ï¿½            MAX NUMBER OF DIFFERENCES TO REPORT:        0  (0 = NO LIMIT)
-ï¿½            PRINT RECORDS SELECTED:                     CHANGED, INSERTED, DELETED
-ï¿½            UNFORMATTED REPORT STYLE:                   CONDENSED
-ï¿½            OLD/NEW PRINT SEQUENCE:                     GROUPED
-ï¿½
-ï¿½    CONDENSED REPORT OPTIONS IN EFFECT:
-ï¿½            PRINT CHANGED RECORD CONTENT:                      RECORD
-ï¿½            PRINT INSERTED RECORD CONTENT:                     RECORD
-ï¿½            PRINT DELETED RECORD CONTENT:                      RECORD
-ï¿½            PRINT MATCHED RECORD CONTENT:                      RECORD
-ï¿½            PRINT "RULER" (T)OP OF PAGE, (A)LWAYS, OR (N)EVER: TOP
-ï¿½            SUPPRESS PRINT LINES THAT DO NOT CONTAIN CHANGES:  YES
-ï¿½            PRINT ONLY CHANGED DATA FOR THE NEW RECORD:        NO
-ï¿½            UNDERLINE CHANGES:                                 BOTH
-ï¿½            UNDERLINE KEY OR SYNC                              BOTH
-ï¿½            CHANGED DATA UNDERLINE CHARACTER:                  _
-ï¿½            KEY OR SYNC FIELD UNDERLINE CHARACTER:
-ï¿½
-ï¿½    COMPARE STATISTICS:
-ï¿½            "OLD" DATASET RECORDS READ:                24
-ï¿½            "NEW" DATASET RECORDS READ:                24
-ï¿½            "OLD" DATASET RECORDS COMPARED:            24
-ï¿½            "NEW" DATASET RECORDS COMPARED:            24
-ï¿½            NUMBER OF RECORDS MATCHED:                 19
-ï¿½            NUMBER OF RECORDS CHANGED:                  5
-ï¿½            NUMBER OF RECORDS INSERTED:                 0
-ï¿½            NUMBER OF RECORDS DELETED:                  0
-ï¿½
-ï¿½                                                ****  E N D  O F  R E P O R T  ****]]></ResultReport>
-        </FileAIDCompare>
+        <Job name="FAComp" haltExecution="true" datasetName="SALESSUP.TTT.RUN.JCL(FACOMR)" jobLocation="DATASET" returnCodeVerify="value &lt; 3" resultReturnCode="0003">
+          <Content><![CDATA[//XXX DD DSN=]]></Content>
+        </Job>
       </Test>
     </XaUnit>
   </AST>
@@ -147,7 +23,10 @@ $$DD01 COMPARE
           <Job name="Deploy Run" haltExecution="false" datasetName="SALESSUP.TTT.RUN.JCL(CWTTJCLC)" jobLocation="DATASET" returnCodeVerify="value &lt; 8">
             <Content><![CDATA[//XXX DD DSN=]]></Content>
           </Job>
-          <FileAIDCompare label="Compare Outputs" checkChanged="true" checkInserted="false" checkDeleted="false">
+          <Job name="FAComp" haltExecution="true" datasetName="SALESSUP.TTT.RUN.JCL(FACOMR)" jobLocation="DATASET" returnCodeVerify="value &lt; 3">
+            <Content><![CDATA[//XXX DD DSN=]]></Content>
+          </Job>
+          <FileAIDCompare label="Compare Outputs" checkChanged="true" checkInserted="true" checkDeleted="true">
             <JCL><![CDATA[//TSOIDC JOB  ('OAABAS9.0.4QC',822),'FA COMPARE',
 //             CLASS=L,MSGCLASS=X,NOTIFY=&SYSUID
 /*JOBPARM  L=9999,S=CWCC
@@ -182,6 +61,6 @@ $$DD01 COMPARE
       <ExternalResources />
     </ExecutionContext>
   </Context>
-  <Started>20251001-16-59-17</Started>
-  <Ended>20251001-16-59-27</Ended>
+  <Started>20251002-10-15-31</Started>
+  <Ended>20251002-10-15-42</Ended>
 </XaUnitResult>

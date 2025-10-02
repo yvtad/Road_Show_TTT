@@ -4,35 +4,8 @@
     <Job name="Deploy Run" haltExecution="false" datasetName="SALESSUP.TTT.RUN.JCL(CWTTJCLC)" jobLocation="DATASET" returnCodeVerify="value &lt; 8">
       <Content><![CDATA[//XXX DD DSN=]]></Content>
     </Job>
-    <FileAIDCompare label="Compare Outputs" checkChanged="true" checkInserted="true" checkDeleted="true">
-      <JCL><![CDATA[//TSOIDC JOB  ('OAABAS9.0.4QC',822),'FA COMPARE',
-//             CLASS=L,MSGCLASS=X,NOTIFY=&SYSUID
-/*JOBPARM  L=9999,S=CWCC
-//*
-//*  YOU ARE VIEWING JCL THAT FILE-AID/MVS HAS GENERATED TO
-//*  COMPARE DATASETS.
-//*
-//*  YOU CAN CHANGE THIS JCL IF DESIRED AND USE THE SUBMIT PRIMARY
-//*  COMMAND TO SUBMIT THE JOB. THE CREATE OR REPLACE PRIMARY COMMAND
-//*  CAN BE USED TO KEEP THIS JOBSTREAM FOR FUTURE USE.
-//*
-//*  USE THE END COMMAND TO EXIT WITHOUT SUBMITTING THE JOB.
-//*
-//FASTEP   EXEC PGM=FILEAID,REGION=08M
-//STEPLIB  DD DISP=SHR,DSN=CSGI.CW.VJGA.CXVJLOAD
-//         DD DISP=SHR,DSN=CSGI.CW.VJGA.SXVJLOAD
-//SYSPRINT DD  SYSOUT=*
-//SYSLIST  DD  SYSOUT=*,DCB=(LRECL=183,BLKSIZE=1830)
-//DD01     DD  DSN=SALESSUP.TTT.REPORT.FILE3,
-//             DISP=SHR
-//DD01C    DD  DSN=SALESSUP.TTT.REPORT.FILE1,
-//             DISP=SHR
-//DD01CP   DD  DSN=SALESSUP.FILEAID.CC.D20205.T160739,
-//             DISP=(OLD,KEEP,KEEP)
-//SYSIN    DD  *
-$$DD01 COMPARE
-/*
-//]]></JCL>
-    </FileAIDCompare>
+    <Job name="Compare File Outputs" haltExecution="false" datasetName="SALESSUP.TTT.RUN.JCL(FACOMR)" jobLocation="DATASET" returnCodeVerify="value &lt; 3">
+      <Content><![CDATA[//XXX DD DSN=]]></Content>
+    </Job>
   </Test>
 </XaUnit>
